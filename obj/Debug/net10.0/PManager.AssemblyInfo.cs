@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PManager")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c0cc2f76bfd9c845081ee1f6a47a0ab8bdabe16b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+72a2eb8dce7b9e40a6788124c6b346180930142a")]
 [assembly: System.Reflection.AssemblyProductAttribute("PManager")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PManager")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

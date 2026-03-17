@@ -8,4 +8,8 @@ public interface IPaymentService
     Task<Payment> CreatePaymentAsync(CreatePaymentDto dto);
 
     Task<List<Payment>> GetPaymentsAsync();
+    Task<bool> UpdatePaymentStatusAsync(int id, string status);
+
+    Task<List<Payment>> GetPaymentsAsync(string? status, int page, int pageSize);
+
 }

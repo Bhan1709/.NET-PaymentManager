@@ -8,7 +8,7 @@ public class Payment
 
     public string Currency { get; set; } = "USD";
 
-    public string Status { get; set; } = "Pending";
+    public PaymentStatus Status { get; set; } = PaymentStatus.Pending;
 
     public int UserId { get; set; }
 
@@ -16,3 +16,4 @@ public class Payment
 
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 }
+
