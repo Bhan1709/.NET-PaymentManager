@@ -15,6 +15,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddScoped<IPaymentService, PaymentService>();
 builder.Services.AddValidatorsFromAssemblyContaining<CreatePaymentDtoValidator>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 var app = builder.Build();
 
@@ -26,5 +27,6 @@ if (app.Environment.IsDevelopment())
 
 app.MapGet("/", () => "Payment Manager API Running");
 app.MapPaymentEndpoints();
+app.MapUserEndpoints();
 
 app.Run();
