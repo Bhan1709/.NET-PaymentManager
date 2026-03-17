@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using PaymentManager.Infrastructure.Data;
+using PaymentManager.Application.Services;
+using PaymentManager.API.Endpoints;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +10,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<IPaymentService, PaymentService>();
 
 var app = builder.Build();
 
@@ -18,5 +22,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.MapGet("/", () => "Payment Manager API Running");
+app.MapPaymentEndpoints();
 
 app.Run();
